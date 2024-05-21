@@ -1,0 +1,96 @@
+
+#skills{
+    overflow: hidden;
+    width: 100vw;
+    max-width: 65rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 30px auto;
+}
+
+.skillTitle{
+    font-size: 3rem;
+    font-weight: 600;
+    padding-top: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+
+.skillBars{
+    width: 100vw;
+    max-width: 80%;
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skillBar{
+    display: inline-flex;
+    margin: 1rem;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    background: rgb(50, 50, 50);
+    transition: transform 0.3s ease-in-out,box-shadow 0.3s ease-in-out;
+    
+    
+}
+.skillBar:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #fff;
+}
+@keyframes runAnimation {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(10px);  
+    }
+  }
+.skillBarImg{
+    object-fit: cover;
+    height: 2rem;
+    width: 2rem;
+    margin-right: 0.80rem;
+}
+.skillBarText{
+    justify-content: center;
+    animation: runAnimation 1s infinite alternate;
+    /* margin-top: 7px; */
+    font-size: 0.90rem;
+    /* background-color: #fff; */
+}
+
+
+/*425 1st */
+/* 480 2nd */
+
+@media screen and (max-width:480px) {
+    #skills{
+        /* margin-left: 40px; */
+    }
+    .skillBars{
+        min-width: 80vw;
+    }
+    .skillBar{
+        padding: 0.50rem 0.50rem; 
+    }
+    .skillBarText{
+        font-size: 0.80rem;
+        margin: 0 10px;
+    }
+    .skillTitle{
+        margin-right: 60px;
+        font-size: 2.60rem;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+@media screen and (max-width:768px) {
+    .skillBar{
+        padding: 0.70rem 0.70rem; 
+    }
+    
+}
