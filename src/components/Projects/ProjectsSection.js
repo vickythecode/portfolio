@@ -3,6 +3,8 @@ import './projects.css';
 import pImg1 from '../../images/pImg1.jpg';
 import pImg2 from '../../images/pImg2.jpg';
 import pImg3 from '../../images/pImg3.jpg';
+import pImg4 from '../../images/pImg4.png';
+
 
 const Projects = () => {
   const projectData = [
@@ -20,14 +22,8 @@ const Projects = () => {
     },
     {
       name: 'X clone',
-      imageUrl: pImg1,
+      imageUrl: pImg4,
       githubLink: 'https://github.com/vickythecode/X-clone',
-      techStack: ['I built a clone of X using HTML and Tailwind CSS ','to enhance and demonstrate my web development skills.'],
-    },
-    {
-      name: 'Bloggy',
-      imageUrl: pImg1,
-      githubLink: 'http://',
       techStack: ['I built a clone of X using HTML and Tailwind CSS ','to enhance and demonstrate my web development skills.'],
     },
   ];

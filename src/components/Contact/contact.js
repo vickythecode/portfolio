@@ -18,7 +18,7 @@ const Contact = () => {
       })
       .then(
         () => {
-          console.log('SUCCESS!');
+          console.log('SUCCESS!');  
           e.target.reset()
           alert("Successfully Submitted")
         },

@@ -1,102 +1,53 @@
 import React from 'react';
 import './skills.css';
-import HtmlImg from '../../images/html.png'
-import cssImg from '../../images/css.png'
-import jsImg from '../../images/js.png'
-import reactImg from '../../images/react.png'
-import pythonImg from '../../images/python.png'
-import bootImg from '../../images/bootstrap.png'
-import tailImg from '../../images/tailwind.png'
-import javaImg from '../../images/java.png'
-import github from '../../images/github.png'
-import nextjs from '../../images/nextjs.png'
-import node from '../../images/node.png'
-import express from '../../images/express.png'
+import HtmlImg from '../../images/html.png';
+import cssImg from '../../images/css.png';
+import jsImg from '../../images/js.png';
+import reactImg from '../../images/react.png';
+import pythonImg from '../../images/python.png';
+import bootImg from '../../images/bootstrap.png';
+import tailImg from '../../images/tailwind.png';
+import javaImg from '../../images/java.png';
+import github from '../../images/github.png';
+import nextjs from '../../images/nextjs.png';
+import node from '../../images/node.png';
+import express from '../../images/express.png';
+import mongo from '../../images/mongo.png';
 
+const skillData = [
+  { img: HtmlImg, alt: 'HtmlImg', name: 'Html' },
+  { img: cssImg, alt: 'CssImg', name: 'Css' },
+  { img: jsImg, alt: 'JsImg', name: 'javascript' },
+  { img: reactImg, alt: 'ReactImg', name: 'React' },
+  { img: bootImg, alt: 'BootstrapImg', name: 'Bootstrap' },
+  { img: tailImg, alt: 'TailwindImg', name: 'Tailwind' },
+  { img: github, alt: 'gitImg', name: 'Github', style: { backgroundColor: 'white', borderRadius: '5px' } },
+  { img: nextjs, alt: 'nextjsImg', name: 'NextJs', style: { backgroundColor: 'white', borderRadius: '5px' } },
+  { img: node, alt: 'nodeImg', name: 'NodeJs', style: { backgroundColor: 'white', borderRadius: '5px' } },
+  { img: express, alt: 'expressImg', name: 'Express', style: { backgroundColor: 'white', borderRadius: '5px' } },
+  { img: mongo, alt: 'mongoImg', name: 'MongoDb', style: { backgroundColor: 'white', borderRadius: '5px' } },
+  { img: pythonImg, alt: 'PythonImg', name: 'Python' },
+  { img: javaImg, alt: 'JavaImg', name: 'Java' },
+];
 
 const Skills = () => {
   return (
     <div>
-        <section id='skills'>
-            <span className="skillTitle">What I Know</span>
-            <div className="skillBars">
-              <div className="skillBar">
-                <img src={HtmlImg} alt="HtmlImg" className="skillBarImg" />
-                <div className="skillBarText">
-                  <h2>Html</h2>
-                </div>
-              </div>
-              
-              <div className="skillBar">
-                <img src={cssImg} alt="CssImg" className="skillBarImg" />
-                <div className="skillBarText">
-                  <h2>Css</h2>
-                </div>
-              </div>
-              <div className="skillBar">
-                <img src={jsImg} alt="JsImg" className="skillBarImg" />
-                <div className="skillBarText">
-                  <h2>javascript</h2>
-                </div>
-              </div>
-              <div className="skillBar">
-                <img src={reactImg} alt="ReactImg" className="skillBarImg" />
-                <div className="skillBarText">
-                  <h2>React</h2>
-                </div>
-              </div>
-              <div className="skillBar">
-                <img src={pythonImg} alt="PythonImg" className="skillBarImg" />
-                <div className="skillBarText">
-                  <h2>Python</h2>
-                </div>
-              </div>
-              <div className="skillBar">
-                <img src={bootImg} alt="BootstrapImg" className="skillBarImg" />
-                <div className="skillBarText">
-                  <h2>Bootstrap</h2>
-                </div>
-              </div>
-              <div className="skillBar">
-                <img src={tailImg} alt="TailwindImg" className="skillBarImg" />
-                <div className="skillBarText">
-                  <h2>Tailwind</h2>
-                </div>
-              </div>
-              <div className="skillBar">
-                <img src={javaImg} alt="JavaImg" className="skillBarImg" />
-                <div className="skillBarText">
-                  <h2>Java</h2>
-                </div>
-              </div>
-              <div className="skillBar">
-                <img src={github} alt="gitImg" className="skillBarImg" style={{backgroundColor:"white",borderRadius:"5px"}} />
-                <div className="skillBarText">
-                  <h2>Github</h2>
-                </div>
-              </div>
-              <div className="skillBar">
-                <img src={nextjs} alt="nextjsImg" className="skillBarImg" style={{backgroundColor:"white",borderRadius:"5px"}} />
-                <div className="skillBarText">
-                  <h2>NextJs</h2>
-                </div>
-              </div>
-              <div className="skillBar">
-                <img src={node} alt="nodeImg" className="skillBarImg" style={{backgroundColor:"white",borderRadius:"5px"}} />
-                <div className="skillBarText">
-                  <h2>NodeJs</h2>
-                </div>
-              </div>
-              <div className="skillBar">
-                <img src={express} alt="expressImg" className="skillBarImg" style={{backgroundColor:"white",borderRadius:"5px"}} />
-                <div className="skillBarText">
-                  <h2>Express</h2>
-                </div>
+      <section id="skills">
+        <span className="skillTitle">What I Know</span>
+        <div className="skillBars">
+          {skillData.map((skill, index) => (
+            <div className="skillBar" key={index}>
+              <img src={skill.img} alt={skill.alt} className="skillBarImg" style={skill.style || {}} />
+              <div className="skillBarText">
+                <h2>{skill.name}</h2>
               </div>
             </div>
-        </section>
+          ))}
+        </div>
+      </section>
     </div>
-  )
-}
+  );
+};
 
-export default Skills
+export default Skills;
