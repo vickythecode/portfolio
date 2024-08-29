@@ -16,7 +16,7 @@ function Intro() {
             <span className="introText">I'm <span className="introName">Vignesh Raman</span><br /><Typewriter/></span>
             <p className="introPara">Iam a Skilled Developer with experience <br />in creating apps and websites</p>
             <div className="btnContainer">
-            <Link to='contact'><button className="btn1">Hire Me <FontAwesomeIcon icon={faBriefcase} /></button></Link>
+            <a href='https://drive.google.com/file/d/1-dFmhim3tVMasbmw9XrSBByjOMiBKZJ-/view?usp=drive_link' target='_blank'><button className="btn1">Hire Me <FontAwesomeIcon icon={faBriefcase} /></button></a>
             <Link to='projects'><button className="btn2">Projects <FontAwesomeIcon icon={faCode} /> </button></Link>
             </div>
             <div className="imgContainer">
