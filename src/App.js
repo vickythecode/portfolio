@@ -4,11 +4,13 @@ import Skills from "./components/Skills/skills";
 import ProjectsSection from "./components/Projects/ProjectsSection";
 import Contact from "./components/Contact/contact";
 import Footer from "./components/Footer/footer";
+import About from "./components/About/about"
 function App() {
   return (
     <div className="App">
       <Navbar/>
       <Intro/>
+      <About/>
       <Skills/>
       <ProjectsSection/>
       <Contact/>
