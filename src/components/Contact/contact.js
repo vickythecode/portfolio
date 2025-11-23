@@ -17,7 +17,7 @@ const Contact = () => {
         publicKey: 'OCvPyP3yRV8w8kNTu',
       })
       .then(
-        () => {
+        () => {   
           console.log('SUCCESS!');  
           e.target.reset()
           alert("Successfully Submitted")
